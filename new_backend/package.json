@@ -1,0 +1,41 @@
+{
+  "name": "new_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --watch src -e ts --exec \"tsx src/index.ts\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "cors": "^2.8.5",
+    "ngrok": "^5.0.0-beta.2",
+    "octokit": "^5.0.3",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "devDependencies": {
+    "@better-auth/cli": "1.2.10",
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.19",
+    "@types/node": "^24.0.4",
+    "@types/pg": "^8.15.4",
+    "bcrypt": "^6.0.0",
+    "better-auth": "^1.2.10",
+    "dotenv": "^16.5.0",
+    "eslint": "^9.29.0",
+    "express": "^5.1.0",
+    "kysely": "^0.28.2",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.8.3"
+  },
+  "prisma": {
+    "schema": "./prisma/schema.prisma"
+  }
+}
