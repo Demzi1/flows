@@ -32,9 +32,6 @@ app.use("/api", githubRoutes)
 
 const port = process.env.PORT || 3000
 
-app.post("/api/webhook/github/flows", (req:Request, res:Response)=>{
-    console.log(req.body)
-})
 
 app.get("/",(req:Request, res:Response)=>{
     res.send("hello")

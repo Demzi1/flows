@@ -5,7 +5,7 @@ import { config } from "dotenv";
 
 config();
  
-const prisma = new PrismaClient();
+export const prisma = new PrismaClient();
  
 export const auth = betterAuth({
   database: prismaAdapter(prisma, {
