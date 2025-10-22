@@ -19,7 +19,7 @@ export const createFlow = async(req:Request, res:Response)=>{
          const {accessToken} = await auth.api.getAccessToken({
                 body:{
                     providerId:"github",     
-                    userId:"Q5ii0OBq5EYIFwx6yDyknv9tQjphtdsC"
+                    userId:"woKCk50J362DSKBg47ccojrgRxvbSNZp"
                     
                     
                 }, 
@@ -33,6 +33,8 @@ export const createFlow = async(req:Request, res:Response)=>{
             addr: 3000,  
             authtoken: process.env.NGROK_AUTHT_TOKEN as string,
         })
+
+        console.log(url)
 
 
         const octokit = new Octokit({auth:`${accessToken}`})
