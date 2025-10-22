@@ -13,12 +13,13 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
 model Flows {
   id            Int   @id @default(autoincrement())
   name          String
   status        String 
   trigger       Json
-  actions        Json
+  actions       Json[]
   ownerId       String
   owner         User    @relation(fields: [ownerId],references: [id])
   createdAt     DateTime @default(now())
@@ -26,6 +27,8 @@ model Flows {
 
   @@map("flows")
 }
+
+
 
 model User {
   id            String    @id
