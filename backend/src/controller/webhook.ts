@@ -24,6 +24,7 @@ export const webhookController = async(req:Request, res:Response)=>{
                 equals: repoName,
                 }}}
             )
+            console.log(flows)
             res.status(200).json(flows)
 
             flows.forEach(flow =>{
