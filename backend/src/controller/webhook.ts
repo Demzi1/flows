@@ -14,6 +14,8 @@ export const webhookController = async(req:Request, res:Response)=>{
    if(!verify){
     res.status(401).send('unauthorized')
    }
+
+   console.log(event)
    
    const repoName = payload.repository.full_name
     
